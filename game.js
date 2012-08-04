@@ -53,6 +53,7 @@ function animate()
 function gameStart()
 {
 	closeMenu(animate)
+	fillBuildMenu()
 }
 
 mainMenu()
