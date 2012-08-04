@@ -1,0 +1,12 @@
+Title: Shower Defense
+
+single 2d map
+set path for mobs
+click to build towers around the path
+20 lives
+10 waves, 15 per wave, 10th is boss
+mobs are spiders, wasps (air units), toaster, snakes, scorpions, scary animals, ball of hair
+towers are shampoo, conditioner, bodywash, ice, showerheads, drains (trap)
+currency is soap
+
+
