@@ -1,6 +1,9 @@
 function mainMenu()
 {
+<<<<<<< HEAD
 	//public code
+=======
+>>>>>>> upstream/master
 	canvas.fillStyle = "#000"; // Set color to black
 	canvas.font="40px Arial";
 	canvas.fillText("Shower Defense", (CANVAS_WIDTH/2)-150, 50);
