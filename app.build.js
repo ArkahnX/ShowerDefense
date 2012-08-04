@@ -42,6 +42,10 @@
 		quote_keys: true,
 		except: []
 	},
+	wrap: {
+		start: "(function(window, undefined) {",
+		end: "init();}(window));"
+	},
 	findNestedDependencies: true,
 	optimizeCss: "standard",
 	inlineText: true,
