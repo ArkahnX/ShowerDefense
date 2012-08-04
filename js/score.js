@@ -43,6 +43,5 @@ function sendMob(type)
 		setTimeout (mobToSend , 1000 );
 		currentMobs++; //Tracks spawned mobs
 	}
-		
 }
 
