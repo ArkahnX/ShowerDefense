@@ -1,11 +1,9 @@
 
-	//private code
-	return function draw()
+function draw()
+{
+	while (!inGame)
 	{
-		//private code
-		while (!inGame)
-		{
-			mainMenu();
-		}
-		drawGame();
-	};
+		mainMenu();
+	}
+	drawGame();
+}
