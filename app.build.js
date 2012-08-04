@@ -44,7 +44,7 @@
 	},
 	wrap: {
 		start: "(function(window, undefined) {",
-		end: "fragments/end.frag"
+		end: "init();}(window));"
 	},
 	findNestedDependencies: true,
 	optimizeCss: "standard",

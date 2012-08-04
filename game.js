@@ -6,10 +6,8 @@ var init = function()
 	var inGame = false;
 
 	//Create canvas element
-	var canvasElement = $("<canvas width='" + CANVAS_WIDTH +
-	                      "' height='" + CANVAS_HEIGHT + "'></canvas>");
+	var canvasElement = $("#canvas");
 	var canvas = canvasElement.get(0).getContext("2d");
-	canvasElement.appendTo('div#game');
 
 	var fps = 30;
 	// setInterval(function()
