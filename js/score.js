@@ -3,8 +3,6 @@ var money = 500;
 var score = 0;
 var wave = 0;
 var currentMobs = 0;
-var waveTime = 0;
-var time = 0;
 var mobsToSend = 10;
 
 function mobKilled(type)
@@ -43,6 +41,7 @@ function sendMob(type)
 	if (mobsToSend > 0)
 	{
 		setTimeout (mobToSend , 1000 );
+		currentMobs++; //Tracks spawned mobs
 	}
 		
 }
