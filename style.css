@@ -1,8 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-body {
-	background-color: #CCCCCC;	
+body
+{
+	background-color: #CCCCCC;
 }
 
 #splash, #playground
@@ -15,35 +16,74 @@ body {
 	margin-top: 10px;
 }
 
-#game 
+#game
 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 800px;	
+	width: 800px;
 }
 
+#wrapper
+{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:4;
+	background-color:#C9E4ED;
+}
 
-#menu {
+#mainMenu
+{
+	position:absolute;
+	margin:auto;
+	height:600px;
+	width:800px;
+	z-index:5;
+	top: 10px;
+	left: 0;
+	right: 0;
+	background-image:url('images/Shower Main.png');
+	font-size:30px;
+}
+
+#mainMenu ul
+{
+	list-style:none;
+}
+
+#mainMenu ul span:hover
+{
+	color:#444;
+	cursor:pointer;
+}
+
+#menu
+{
 	width: 224px;
 	height: 256px;
 	background-color: #FFFFFF;
 	position: absolute;
 	margin-left: 32px;
-	margin-top: 32px; 
+	margin-top: 32px;
 }
 
-#scoreboard {
+#scoreboard
+{
 	width: 224px;
 	height: 96px;
-	background-color: #00F00F;	
+	background-color: #00F00F;
 }
 
-#buildmenu {
+#buildmenu
+{
 	width: 224px;
 	height: 160px;
 	background-color: #111111;
 }
 
-#menu img {
-	margin: 14px;	
+#menu img
+{
+	margin: 14px;
 }
