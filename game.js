@@ -15,4 +15,5 @@ var fps = 30;
 // mainMenu();
 setTimeout(function() {
 	drawMap();
+	drawMenu();
 }, 10)
