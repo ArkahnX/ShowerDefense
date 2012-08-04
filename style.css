@@ -24,22 +24,24 @@ body {
 
 
 #menu {
-	width: 256px;
-	height: 320px;
+	width: 224px;
+	height: 256px;
 	background-color: #FFFFFF;
 	position: absolute;
-	margin-left: 512px;
+	margin-left: 32px;
 	margin-top: 32px; 
 }
 
 #scoreboard {
-	width: 256px;
-	height: 150px;	
+	width: 224px;
+	height: 96px;
+	background-color: #00F00F;	
 }
 
 #buildmenu {
-	width: 256px;
-	padding-left: 10px;
+	width: 224px;
+	height: 160px;
+	background-color: #111111;
 }
 
 #menu img {
