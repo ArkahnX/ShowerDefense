@@ -7,8 +7,8 @@ function drawMap()
 	var ypos = 0;
 	for (var i = 0; i < mapArray.length; i++)
 	{
-		var imageObj = new Image();
-		var context = canvas.getContext("2d");
+		var canvas = document.getElementById("game");
+        var context = canvas.getContext("2d");
         imageObj.onload = function() {
           context.drawImage(imageObj, xpos, ypos);
         };
