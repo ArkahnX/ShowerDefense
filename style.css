@@ -21,3 +21,27 @@ body {
 	margin-right: auto;
 	width: 800px;	
 }
+
+
+#menu {
+	width: 256px;
+	height: 320px;
+	background-color: #FFFFFF;
+	position: absolute;
+	margin-left: 512px;
+	margin-top: 32px; 
+}
+
+#scoreboard {
+	width: 256px;
+	height: 150px;	
+}
+
+#buildmenu {
+	width: 256px;
+	padding-left: 10px;
+}
+
+#menu img {
+	margin: 14px;	
+}
