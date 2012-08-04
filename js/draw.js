@@ -1,8 +1,11 @@
-define(["js/drawgame"], function()
-{
-	while (!inGame)
+
+	//private code
+	return function draw()
 	{
-		MainMenu();
-	}
-	DrawGame();
-});
+		//private code
+		while (!inGame)
+		{
+			mainMenu();
+		}
+		drawGame();
+	};
