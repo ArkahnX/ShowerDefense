@@ -27,25 +27,20 @@ const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
 var inGame = false;
 
-//Create canvas element
-var canvasElement = document.getElementById("canvas");
-var canvas = canvasElement.getContext("2d");
+//Get canvas element
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
 
-var fps = 30;
-// setInterval(function()
-// {
-//   update();
-//   draw();
-// }, 1000/fps);
-// mainMenu();
-// requestAnimationFrame(function() {
-// 	console.log("stuff")
-// 	drawMap();
-// 	drawMenu();
-// });
 
-setTimeout(function() {
-	console.log("stuff")
-	drawMap();
+var draw = function() {
+	isReady(function() {
+		drawMap()
+	});
 	drawMenu();
-},10);
+};
+function animate()
+{
+    requestAnimationFrame( animate,canvas );
+    draw();
+}
+animate();
