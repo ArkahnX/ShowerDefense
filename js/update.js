@@ -1,10 +1,8 @@
-
-	//private code
-	return function update()
+function update()
+{
+	//public code
+	if (inGame)
 	{
-		//public code
-		if (inGame)
-		{
 
-		}
-	};
+	}
+}

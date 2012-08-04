@@ -1,6 +1,4 @@
-
-	//private code
-	return function drawGame()
-	{
-		//public code
-	};
+function drawGame()
+{
+	//public code
+}
