@@ -1,4 +1,3 @@
-
 function draw()
 {
 	while (!inGame)
