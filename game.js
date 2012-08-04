@@ -3,7 +3,7 @@
 
 	const CANVAS_WIDTH 	=	800;
 	const CANVAS_HEIGHT =	800;
-	boolean inGame = 0;
+	boolean inGame = new Boolean();
 
 	//Create canvas element
 	var canvasElement = $("<canvas width='" + CANVAS_WIDTH +
