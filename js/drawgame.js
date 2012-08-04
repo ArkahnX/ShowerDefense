@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-function drawGame()
-{
-
-=======
 function drawMap()
 {
 	//Main map array
 	var mapArray = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-	
+
 	var xpos = 0;
 	var ypos = 0;
-	for (var i = 0; i < mapArray.length; i++) 
+	for (var i = 0; i < mapArray.length; i++)
 	{
 		var imageObj = new Image();
 		var context = canvas.getContext("2d");
@@ -18,12 +13,12 @@ function drawMap()
           context.drawImage(imageObj, xpos, ypos);
         };
         imageObj.src = mapTileImage(mapArray[i]);
-		
+
 		xpos += 32;
 		if (xpos === 25)
 		{
 			ypos += 32;
-			xpos = 0;	
+			xpos = 0;
 		}
 	}
 }
@@ -33,7 +28,6 @@ function mapTileImage(id)
 	//Converts map array # value to image file
 	if (id === 0)
 	{
-		return "images/tile1.png";	
+		return "images/tile1.png";
 	}
->>>>>>> upstream/master
 }
