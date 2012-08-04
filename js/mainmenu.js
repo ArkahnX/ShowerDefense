@@ -1,8 +1,11 @@
 function mainMenu()
 {
-	canvas.fillStyle = "#000"; // Set color to black
-	canvas.font="40px Arial";
-	canvas.fillText("Shower Defense", (CANVAS_WIDTH/2)-150, 50);
-	//TODO: Replace with drawing background images
-	//TODO: Buttons for: starting game, options, credits
+	var container = $("<div id='mainMenu'></div>");
+	var list = $("<ul></ul>");
+	var startGame = $("<li id='startGameButton'>Start Game</li>");
+	var optionsDiv = $("<li id='optionsButton'>options</li>");
+	list.append(startGame,optionsDiv);
+	container.append(list);
+	console.log(container)
+	$("body").append(container);
 }
