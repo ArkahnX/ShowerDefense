@@ -12,6 +12,8 @@
  *
  */
 
+var enemies = new Array(); //Keep track of enemies in an array.
+ 
 function Mob(enemy)
 {	
 	switch(enemy)
@@ -36,6 +38,16 @@ function Mob(enemy)
 			this.type = "ground";
 			this.health = 20;
 			break;
+		case "cat":
+			this.enemy = enemy;
+			this.type = "ground";
+			this.health = 30;
+			break;
+		case "flyingSquirrel":
+			this.enemy = enemy;
+			this.type = "flying";
+			this.health = 40;
+			break;
 		default:
 			this.enemy = enemy;
 			this.type = null;
@@ -44,14 +56,13 @@ function Mob(enemy)
 			
 }
 
-/* Testing
-var mob1 = new Mob("wasp");
-var mob2 = new Mob("spider");
-var mob3 = new Mob("snake");
-var mob4 = new Mob("scorpion");
-
-alert("Mob 1 is a " + mob1.type + " type and has " + mob1.health + " health and is a " + mob1.enemy);
-alert("Mob 2 is a " + mob2.type + " type and has " + mob2.health + " health and is a " + mob2.enemy);
-alert("Mob 3 is a " + mob3.type + " type and has " + mob3.health + " health and is a " + mob3.enemy);
-alert("Mob 4 is a " + mob4.type + " type and has " + mob4.health + " health and is a " + mob4.enemy);
-*/
+// Testing
+var enemies = ["flyingSquirrel", "cat", "spider", "scorpion", "snake", "wasp"];
+var mob = new Array();
+mob[0] = "banana";
+alert(mob[0]);
+for(i=0; i<enemies.length; i++)
+{
+	mob[i] = new Mob(enemies[i]);
+	alert(mob[i].type);
+}
