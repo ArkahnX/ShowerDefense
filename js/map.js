@@ -32,9 +32,11 @@ function drawMap()
 	var xpos = 0;
 	var ypos = 0;
 	var variables = [];
-	for (var i = 0; i < mapArray.length; i++) {
+	for (var i = 0; i < mapArray.length; i++)
+	{
 		variables.push(i * 32)
-		for (var e = 0; e < mapArray[i].length; e++) {
+		for (var e = 0; e < mapArray[i].length; e++)
+		{
 			var img = mapTileImage(mapArray[i][e]);
 			context.drawImage(img, 0, 0, 32, 32, (e * 32), (i * 32), 32, 32);
 		}
