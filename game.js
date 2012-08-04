@@ -6,8 +6,8 @@ var init = function()
 	var inGame = false;
 
 	//Create canvas element
-	var canvasElement = $("#canvas");
-	var canvas = canvasElement.get(0).getContext("2d");
+	var canvasElement = document.getElementById("canvas");
+	var canvas = canvasElement.getContext("2d");
 
 	var fps = 30;
 	// setInterval(function()
