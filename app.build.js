@@ -43,8 +43,8 @@
 		except: []
 	},
 	wrap: {
-		start: "(function(window, undefined) {",
-		end: "init();}(window));"
+		start: "(function() {",
+		end: "init();});"
 	},
 	findNestedDependencies: true,
 	optimizeCss: "standard",
