@@ -23,7 +23,6 @@ function Mob(enemy)
 			this.enemy = enemy;
 			this.type = "flying";
 			this.health = 20;
-			var wasps = new Array();
 			break;
 		case "spider":
 			this.enemy = enemy;
@@ -63,74 +62,80 @@ function createMob(enemy,amount)
 this.enemy = enemy;
 this.amount = amount
 
+	var wasps = new Array();
 	if(this.enemy==="wasp")
 	{		
-		var wasps = new Array();
-		
 		for(i=0; i<this.amount; i++)
 		{
 			wasps[i] = new Mob("wasp");
 		}
 		alert("There are " + wasps.length + " wasps spawned");
+		return wasps;
 	}
 	
+	var cats = new Array();
 	if(this.enemy==="cat")
 	{
-		var cats = new Array();
-		
 		for(i=0; i<this.amount; i++)
 		{
 			cats[i] = new Mob("wasp");
 		}
 		alert("There are " + cats.length + " cats spawned");
+		return cats;
 	}
 	
+	var flyingSquirrels = new Array();
 	if(this.enemy==="flyingSquirrel")
 	{
-		var flyingSquirrels = new Array();
-		
 		for(i=0; i<this.amount; i++)
 		{
 			cats[i] = new Mob("flyingSquirrel");
 		}
 		alert("There are " + flyingSquirrels.length + " flying squirrels spawned");
+		return flyingSquirrels;
 	}
 	
+	var spiders = new Array();
 	if(this.enemy==="spider")
-	{
-		var spiders = new Array();
-		
+	{		
 		for(i=0; i<this.amount; i++)
 		{
 			spiders[i] = new Mob("spider");
 		}
 		alert("There are " + spiders.length + " spiders spawned");
+		return spiders;
 	}
 	
+	var snakes = new Array();
 	if(this.enemy==="snake")
-	{
-		var snakes = new Array();
-		
+	{		
 		for(i=0; i<this.amount; i++)
 		{
 			cats[i] = new Mob("snake");
 		}
 		alert("There are " + snakes.length + " snakes spawned");
+		return snakes;
 	}
 	
+	var scorpions = new Array();
 	if(this.enemy==="scorpion")
-	{
-		var scorpions = new Array();
-		
+	{		
 		for(i=0; i<this.amount; i++)
 		{
 			scorpions[i] = new Mob("scorpion");
 		}
 		alert("There are " + scorpions.length + " scorpions spawned");
+		return scorpions;
 	}
+	
+	var enemiesSpawned = wasps.length + flyingSquirrels.length + cats.length
+						+ spiders.length + snakes.length + scorpions.length;
 }
 
 //Testing
 var mob1 = createMob("wasp",7);
 var mob2 = createMob("cat",7);
-document.write("There are " + enemies.length + " enemies spawned");
+
+alert(mob1[0].type);
+
+alert("There are " + parseInt(mob1.length+mob2.length,10) + " enemies spawned");
