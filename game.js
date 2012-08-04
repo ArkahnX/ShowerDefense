@@ -9,12 +9,12 @@ var canvasElement = $("<canvas width='" + CANVAS_WIDTH +
 var canvas = canvasElement.get(0).getContext("2d");
 canvasElement.appendTo('div#game');
 
-var fps = 30;
-setInterval(function()
-{
-  update();
-  draw();
-}, 1000/fps);
+// var fps = 30;
+// setInterval(function()
+// {
+//   update();
+//   draw();
+// }, 1000/fps);
 
 //Global variables
 inGame = false;
