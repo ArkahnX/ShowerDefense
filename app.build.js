@@ -42,6 +42,10 @@
 		quote_keys: true,
 		except: []
 	},
+	wrap: {
+		start: "(function(window, undefined) {",
+		end: "fragments/end.frag"
+	},
 	findNestedDependencies: true,
 	optimizeCss: "standard",
 	inlineText: true,
