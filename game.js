@@ -1,5 +1,4 @@
-require(["js/mainmenu","js/update","js/draw"],function(mainmenu,update,draw)
-{
+
 	//Game.js
 
 	const CANVAS_WIDTH =	800;
@@ -20,4 +19,4 @@ require(["js/mainmenu","js/update","js/draw"],function(mainmenu,update,draw)
 
 	//Global variables
 	inGame = false;
-});
+
