@@ -1,8 +1,8 @@
 
 	//Game.js
 
-	const CANVAS_WIDTH =	800;
-	const CANVAS_HEIGHT = 600;
+	const CANVAS_WIDTH 	=	800;
+	const CANVAS_HEIGHT =	800;
 
 	//Create canvas element
 	var canvasElement = $("<canvas width='" + CANVAS_WIDTH +
