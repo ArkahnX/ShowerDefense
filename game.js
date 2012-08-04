@@ -19,3 +19,5 @@ var fps = 30;
 
 //Global variables
 inGame = false;
+
+drawMap();
