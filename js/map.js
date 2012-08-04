@@ -21,9 +21,11 @@ function drawMap()
 
 	var xpos = 0;
 	var ypos = 0;
+	var variables = [];
     var context = document.getElementById('canvas').getContext('2d');
 	for (var i = 0; i < mapArray.length; i++)
 	{
+		variables.push(i*32)
 		for (var e = 0; e < mapArray[i].length; e++)
 		{
         	var img = new Image();
@@ -38,12 +40,19 @@ function drawMap()
 			}
 		}
 	}
-	document.getElementById('canvas').addEventListener("click",function(event)
+	var modulus = function(num)
 	{
-		var leftOffset = this.offsetLeft;
-		var topOffset = this.offsetTop;
-		console.log(event);
-	},false);
+		var mod = num % 32;
+		return (num-mod)/32;
+	};
+	$('#canvas').on("click",function(event)
+	{
+		var leftOffset = $(this).position().left;
+		var topOffset = $(this).position().top;
+		var trueX = event.pageX - leftOffset;
+		var trueY = event.pageY - topOffset;
+		console.log(modulus(trueX),modulus(trueY))
+	});
 }
 
 function mapTileImage(id)
@@ -51,12 +60,9 @@ function mapTileImage(id)
 	//Converts map array # value to image file
 	if (id === 0)
 	{
-		return "images/Shower Game Normal Tile.png";
+		return "images/tile1.png";
 	} else if(id === 1)
 	{
-		return "images/Shower Game Tile Path.png"
-	} else if(id === 2)
-	{
-		return "images/Shower Game Tile Path.png"
+		return "images/tile2.png"
 	}
 }
