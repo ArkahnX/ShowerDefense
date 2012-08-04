@@ -33,7 +33,7 @@
 ({
 	baseUrl: "./",
 	name: "game",
-	include: ["js/draw","js/drawgame","js/mainmenu","js/update"],
+	include: ["js/draw","js/map","js/mainmenu","js/update"],
 	out: "build/app.js",
 	keepBuildDir: false,
 	locale: "en-us",
