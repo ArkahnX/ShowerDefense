@@ -20,11 +20,6 @@ var mapArray = [
 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ];
-var modulus = function(num)
-{
-	var mod = num % 32;
-	return (num - mod) / 32;
-};
 
 function drawMap()
 {
@@ -42,14 +37,6 @@ function drawMap()
 		}
 	}
 }
-$('#canvas').on("click", function(event)
-{
-	var leftOffset = $(this).position().left;
-	var topOffset = $(this).position().top;
-	var trueX = event.pageX - leftOffset;
-	var trueY = event.pageY - topOffset;
-	console.log(modulus(trueX), modulus(trueY))
-});
 var ready = false;
 var imagesLoaded = {};
 var imagesList = ["images/tile1.png", "images/tile2.png"];

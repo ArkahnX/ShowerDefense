@@ -35,15 +35,6 @@ var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
 
-var draw = function()
-{
-	isReady(function()
-	{
-		drawMap()
-	});
-	drawMenu();
-};
-
 function animate()
 {
 	requestAnimationFrame(animate, canvas);
@@ -55,5 +46,9 @@ function gameStart()
 	closeMenu(animate)
 	fillBuildMenu()
 }
-
+$(function(){
+	gameStart()
+});
+gameStart()
 mainMenu()
+closeMenu()
