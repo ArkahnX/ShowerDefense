@@ -9,6 +9,10 @@ var buildList = [{
 	}
 }];
 var items = [];
+var whatToBuild = "";
+var target = $("#target");
+var currentLocation = null;
+var tile = $("#tile");
 
 function emptyBuildMenu() {
 	var list = menu.children();
@@ -38,17 +42,17 @@ function fillBuildMenu() {
 			applyClicks();
 		}
 	});
+	var leftOffset = $('#canvas').position().left;
+	var topOffset = $('#canvas').position().top;
+	target.css({
+		left: leftOffset-3,
+		top: topOffset-3
+	});
 }
-var whatToBuild = "";
-
-var target = $("#target");
-var currentLocation = null;
-var tile = $("#tile");
 
 function applyClicks() {
 	$(".container").on("click", function(event) {
 		var container = $(this);
-		console.log(container.find("img").attr("src"))
 		tile.css({
 			left: event.pageX - 16,
 			top: event.pageY - 40
@@ -77,7 +81,7 @@ var currentTarget = function(event) {
 	var trueY = event.pageY - topOffset;
 	return [modulus(trueX), modulus(trueY)];
 };
-target.on("click", function(event) {
+$("#canvas").on("click", function(event) {
 	if (whatToBuild !== "" && canBuild()) {
 		// currentLocation[0] is x value
 		// currentLocation[1] is y value
@@ -92,6 +96,9 @@ target.on("click", function(event) {
 });
 var canBuild = function() {
 	var currentTile = mapArray[currentLocation[1]][currentLocation[0]];
+	if(structureArray[currentLocation[1]][currentLocation[0]] !== null) {
+		return null;
+	}
 	for(var i=0;i<buildList.length;i++) {
 		if(buildList[i].src === whatToBuild) {
 			if(buildList[i].type === "trap") {
@@ -111,22 +118,25 @@ var canBuild = function() {
 	}
 	return false;
 };
+
 $("#canvas").on("mousemove", function(event) {
 	var leftOffset = $('#canvas').position().left;
 	var topOffset = $('#canvas').position().top;
-		currentLocation = currentTarget(event);
-		target.css({
-			left: (currentLocation[0]*32)+leftOffset-3,
-			top: (currentLocation[1]*32)+topOffset-3
-		})
+	currentLocation = currentTarget(event);
+	target.css({
+		left: (currentLocation[0]*32)+leftOffset-3,
+		top: (currentLocation[1]*32)+topOffset-3
+	});
 	if (whatToBuild === "") {
-		target.removeAttr("class").addClass("neutral");
+		strokeColor = "black";
+		if(canBuild() === null) {
+			strokeColor = "blue";
+		}
 	} else {
-		console.log(canBuild())
 		if(canBuild()) {
-			target.removeAttr("class").addClass("good");
+			strokeColor = "green";
 		} else {
-			target.removeAttr("class").addClass("bad");
+			strokeColor = "red";
 		}
 	}
 });

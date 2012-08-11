@@ -4,5 +4,5 @@ var draw = function()
 	{
 		drawMap()
 	});
-	drawMenu();
+	drawCursor();
 };

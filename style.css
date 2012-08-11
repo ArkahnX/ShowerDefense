@@ -146,6 +146,7 @@ body
 
 #target
 {
+	display:none;
 	border-color:black;
 	border-style:dashed;
 	border-width:3px;
@@ -171,4 +172,14 @@ body
 #target.bad
 {
 	border-color:red;
+}
+
+#quit
+{
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size: 30px;
+	font-weight: bold;
+	cursor:pointer;
 }

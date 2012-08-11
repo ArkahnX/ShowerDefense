@@ -34,21 +34,25 @@ var inGame = false;
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
-
+var animation = null;
 function animate()
 {
-	requestAnimationFrame(animate, canvas);
+	animation = requestAnimationFrame(animate, canvas);
 	draw();
 }
-
+function gameEnd()
+{
+	cancelAnimationFrame(animation);
+	openMainMenu();
+}
 function gameStart()
 {
-	closeMenu(animate)
-	fillBuildMenu()
+	animate();
+	closeMainMenu();
 }
-$(function(){
-	gameStart()
-});
-gameStart()
-mainMenu()
-closeMenu()
+
+function prepareGame() {
+	openMainMenu();
+	fillBuildMenu();
+}
+prepareGame();
