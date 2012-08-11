@@ -78,12 +78,13 @@ var currentTarget = function(event) {
 	return [modulus(trueX), modulus(trueY)];
 };
 target.on("click", function(event) {
-	if (whatToBuild !== "") {
+	if (whatToBuild !== "" && canBuild()) {
 		// currentLocation[0] is x value
 		// currentLocation[1] is y value
 		// refer to canvas.on(mouseMove) for how to implement graphically
 		// todo: add layer to map for enemies and turrets, fix build icon in applyClicks
 		//
+		structureArray[currentLocation[1]][currentLocation[0]] = structures.indexOf("images/"+tile[0].className+".png")
 		tile.removeAttr("class").addClass("hidden")
 		// reset whatToBuild to empty after building
 		whatToBuild = "";
@@ -94,13 +95,13 @@ var canBuild = function() {
 	for(var i=0;i<buildList.length;i++) {
 		if(buildList[i].src === whatToBuild) {
 			if(buildList[i].type === "trap") {
-				if(currentTile === 2) {
+				if(currentTile === 1) {
 					return true;
 				} else {
 					return false;
 				}
 			} else {
-				if(currentTile === 1) {
+				if(currentTile === 0) {
 					return true;
 				} else {
 					return false;
