@@ -1,4 +1,8 @@
-function draw()
+var draw = function()
 {
-	drawGame();
-}
+	isReady(function()
+	{
+		drawMap()
+	});
+	drawCursor();
+};

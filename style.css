@@ -90,6 +90,7 @@ body
 	height: 48px;
 	cursor:pointer;
 	color:gray;
+	font-weight:bold;
 }
 
 .container:hover
@@ -98,9 +99,18 @@ body
 	color: white;
 }
 
+.container:hover span
+{
+}
+
 .container span
 {
 	display: block;
+	text-shadow:1px 1px 1px black;
+}
+.container .cost
+{
+	margin-top: -47px;
 }
 
 .container img
@@ -132,4 +142,44 @@ body
 .drain
 {
 	background-image:url("images/drain.png");
+}
+
+#target
+{
+	display:none;
+	border-color:black;
+	border-style:dashed;
+	border-width:3px;
+	width:32px;
+	height:32px;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition:border-color .1s linear
+	/*-moz-transition:border-color .1s linear
+	-ms-transition:border-color .1s linear
+	-o-transition:border-color .1s linear
+	transition:border-color .1s linear*/
+}
+#target.neutral
+{
+	border-color:black;
+}
+#target.good
+{
+	border-color:green;
+}
+#target.bad
+{
+	border-color:red;
+}
+
+#quit
+{
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size: 30px;
+	font-weight: bold;
+	cursor:pointer;
 }
