@@ -1,0 +1,11 @@
+SHOWER DEFENSE
+
+Tower System
+
+NAME - TYPE - COST - Range - Damage
+
+Shower - Regular - 10 - Regular - 10
+Cold Shower - Freeze - 15 - Short - 5
+Cloth Launcher - Air - 25 - Long - 10 (air only)
+Soapy Tower - Weakens - 30 - short - None (all)
+High Pressure Tower - Regular - 50 - Long - 20 (all)
