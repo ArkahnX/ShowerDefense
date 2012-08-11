@@ -73,7 +73,18 @@ body
 {
 	width: 224px;
 	height: 96px;
-	background-color: #00F00F;
+	background-color: #111111;
+	color:gray;
+}
+#scoreboard:hover
+{
+	color:white;
+}
+
+#scoreboard ul
+{
+	list-style:none;
+	margin:0;
 }
 
 #buildmenu
@@ -88,15 +99,17 @@ body
 	padding: 7px;
 	display: inline-block;
 	height: 48px;
-	cursor:pointer;
 	color:gray;
 	font-weight:bold;
+	cursor:default;
+	user-select:none;
 }
 
-.container:hover
+.container:not(.expensive):hover
 {
 	background-color:rgba(255,255,255,0.25);
 	color: white;
+	cursor:pointer;
 }
 
 .container:hover span
@@ -182,4 +195,9 @@ body
 	font-size: 30px;
 	font-weight: bold;
 	cursor:pointer;
+}
+
+.container.expensive
+{
+	color:red;
 }
