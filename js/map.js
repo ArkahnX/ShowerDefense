@@ -43,10 +43,10 @@ var structureArray = [
 	[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 ];
 var tiles = ["images/tile1.png", "images/tile2.png"];
-var structures = ["images/drain.png"];
+var structures = ["images/drain.png","images/scorpion.png"];
 var ready = false;
 var imagesLoaded = {};
-var imagesList = ["images/tile1.png", "images/tile2.png", "images/drain.png"];
+var imagesList = ["images/tile1.png", "images/tile2.png", "images/drain.png","images/scorpion.png","images/snake.png","images/spider.png","images/squirrel.png","images/wasp.png"];
 var images = [];
 for (var i = 0; i < imagesList.length; i++) {
 	imagesLoaded[imagesList[i]] = 0;

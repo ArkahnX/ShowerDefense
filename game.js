@@ -54,5 +54,6 @@ function gameStart()
 function prepareGame() {
 	openMainMenu();
 	fillBuildMenu();
+	addMoney(500);
 }
 prepareGame();
