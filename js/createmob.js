@@ -44,7 +44,7 @@ function Mob(enemy)
 			this.type = "ground";
 			this.health = 30;
 			break;
-		case "flyingSquirrel":
+		case "squirrel":
 			this.enemy = enemy;
 			this.type = "flying";
 			this.health = 40;
@@ -84,15 +84,15 @@ this.amount = amount
 		return cats;
 	}
 	
-	var flyingSquirrels = new Array();
-	if(this.enemy==="flyingSquirrel")
+	var squirrels = new Array();
+	if(this.enemy==="squirrel")
 	{
 		for(i=0; i<this.amount; i++)
 		{
-			cats[i] = new Mob("flyingSquirrel");
+			cats[i] = new Mob("squirrel");
 		}
-		alert("There are " + flyingSquirrels.length + " flying squirrels spawned");
-		return flyingSquirrels;
+		alert("There are " + squirrels.length + " flying squirrels spawned");
+		return squirrels;
 	}
 	
 	var spiders = new Array();
@@ -128,7 +128,7 @@ this.amount = amount
 		return scorpions;
 	}
 	
-	var enemiesSpawned = wasps.length + flyingSquirrels.length + cats.length
+	var enemiesSpawned = wasps.length + squirrels.length + cats.length
 						+ spiders.length + snakes.length + scorpions.length;
 }
 
